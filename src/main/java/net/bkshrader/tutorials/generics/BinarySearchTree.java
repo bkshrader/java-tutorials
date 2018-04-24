@@ -59,4 +59,13 @@ public class BinarySearchTree<T extends Comparable<T>> {
         }
     }
 
+    public T getMinimumValue() {
+        if (this.leftChild == null) return this.value;
+        else return this.leftChild.getMinimumValue();
+    }
+
+    public T getMaximumValue() {
+        if (this.rightChild == null) return this.value;
+        else return this.rightChild.getMaximumValue();
+    }
 }
